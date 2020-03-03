@@ -34,7 +34,7 @@ body {
   font-weight: 500;
   opacity: .16;
   color: #e3e3e3;
-  filter: invert(100%);
+  filter: multiply(100%);
   font-size: 188px;
 }
 
