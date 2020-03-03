@@ -7,9 +7,6 @@ body {
   color: #121212;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 1fr 120px 1fr 1fr 1fr;
-  /* justify-content: center; */
-  /* align-items: center; */
   height: 100vh;
   flex-flow: row nowrap;
   font-family: "Barlow", sans-serif;
@@ -19,21 +16,14 @@ body {
 .text-wrapper {
   padding-top: 100px;
   grid-column: 3 / span 3;
-  /* grid-row: 1; */
-  /* align-self: end; */
 }
 
 .artist-shadow {
-  /* top: -40px; */
   font-size: 188px;
 }
 
 .title-shadow {
   font-size: 188px;
-  /* top: 400px;
-  text-align: right;
-  right: 300px;
-  font-size: 122px; */
 }
 
 .date-shadow {
@@ -42,12 +32,9 @@ body {
 
 .shadows {
   position: absolute;
-  /* width: 150%; */
-  /* margin-left: -5%; */
   z-index: -1;
-  top: -40px;
+  bottom: 0;
   left: -40px;
-  /* text-align: center; */
   font-weight: 500;
   opacity: .16;
   color: #e3e3e3;
@@ -92,15 +79,12 @@ body {
 }
 
 .date {
-  /* padding-top: 20px; */
   font-weight: 500;
-  /* font-size: 18px; */
   padding-bottom: 20px;
   letter-spacing: 1px;
 }
 
 .atmoradio {
   font-weight: 100;
-  /* grid-column: 5; */
   padding-bottom: 55px;
 }
