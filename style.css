@@ -1,0 +1,81 @@
+body {
+  background: rgb(218,156,199);
+  background: linear-gradient(117deg, rgba(218,156,199,0.6768908246892507) 0%, rgba(230,165,210,1) 63%, rgba(153,110,140,1) 100%); 
+}
+
+.content {
+  color: #121212;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr 120px 1fr 1fr 1fr;
+  /* justify-content: center; */
+  /* align-items: center; */
+  height: 100vh;
+  flex-flow: row nowrap;
+  font-family: "Barlow", sans-serif;
+  font-size: 24px;
+}
+
+.text-wrapper {
+  padding-top: 100px;
+  grid-column: 3 / span 3;
+  /* grid-row: 1; */
+  /* align-self: end; */
+}
+
+.artist,
+.title,
+.label,
+.date,
+.atmoradio {
+  /* color: #4E4E4E; */
+}
+.spotify-wrapper {
+  grid-column: 8 / span 5;
+  grid-row: 4;
+}
+
+.artist {
+  grid-row: 2;
+  align-self: start;
+  grid-column: 3 / -1;
+  font-size: 36px;
+}
+
+.title {
+  grid-column: 5 / span 7;
+  grid-row: 2;
+  font-weight: 100;
+  font-size: 64px;
+  align-self: end;
+}
+
+.label {
+  grid-column: 4 / span 8;
+  grid-row: 3;
+  align-self: start;
+  padding-top: 20px;
+  font-weight: 100;
+}
+
+.atmoradio,
+.date {
+  grid-row: 4;
+  grid-column: 5 / span 2;
+  align-self: end;
+  justify-self: end;
+}
+
+.date {
+  /* padding-top: 20px; */
+  font-weight: 500;
+  font-size: 18px;
+  padding-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.atmoradio {
+  font-weight: 100;
+  /* grid-column: 5; */
+  padding-bottom: 55px;
+}
