@@ -33,7 +33,7 @@ body {
 .shadows {
   position: absolute;
   z-index: -1;
-  bottom: 0;
+  bottom: 100px;
   left: -40px;
   font-weight: 500;
   opacity: .16;
