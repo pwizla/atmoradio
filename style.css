@@ -1,6 +1,6 @@
 body {
   background: rgb(218,156,199);
-  background: linear-gradient(117deg, rgba(218,156,199,0.6768908246892507) 0%, rgba(230,165,210,1) 63%, rgba(153,110,140,1) 100%); 
+  background: linear-gradient(243deg, rgba(218,156,199,0.6768908246892507) 0%, rgba(230,165,210,1) 63%, rgba(153,110,140,1) 100%); 
 }
 
 .content {
@@ -23,13 +23,37 @@ body {
   /* align-self: end; */
 }
 
-.artist,
-.title,
-.label,
-.date,
-.atmoradio {
-  /* color: #4E4E4E; */
+.artist-shadow {
+  /* top: -40px; */
+  font-size: 188px;
 }
+
+.title-shadow {
+  font-size: 188px;
+  /* top: 400px;
+  text-align: right;
+  right: 300px;
+  font-size: 122px; */
+}
+
+.date-shadow {
+  font-size: 184px;
+}
+
+.shadows {
+  position: absolute;
+  /* width: 150%; */
+  /* margin-left: -5%; */
+  z-index: -1;
+  top: -40px;
+  left: -40px;
+  /* text-align: center; */
+  font-weight: 500;
+  opacity: .16;
+  color: #e3e3e3;
+  filter: multiply(100%);
+}
+
 .spotify-wrapper {
   grid-column: 8 / span 5;
   grid-row: 4;
@@ -61,15 +85,16 @@ body {
 .atmoradio,
 .date {
   grid-row: 4;
-  grid-column: 5 / span 2;
+  grid-column: 4 / span 3;
   align-self: end;
   justify-self: end;
+  text-align: right;
 }
 
 .date {
   /* padding-top: 20px; */
   font-weight: 500;
-  font-size: 18px;
+  /* font-size: 18px; */
   padding-bottom: 20px;
   letter-spacing: 1px;
 }
