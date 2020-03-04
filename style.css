@@ -19,25 +19,25 @@ body {
   position: absolute;
   color: #D92647;
   top: 68%;
-  left: calc(50% - 550px);
+  left: calc(50% - 33vw);
   transform: translate(-50%, -50%);
-  width: 345px;
-  line-height: 60px;
+  width: 20.54vw;
+  line-height: 5.71vh;
   font-weight: 900;
 }
 
 .title {
   font-family: "Syncopate", sans-serif;
-  font-size: 92px;
+  font-size: 5.48vw;
   font-weight: 700;
   text-transform: uppercase;
-  line-height: 80px;
+  line-height: 7.62vh;
 }
 
 .artist-label {
   font-family: "Old Standard TT", serif;
   font-weight: 400;
-  font-size: 32px;
+  font-size: 1.91vw;
   margin-top: 20px;
   position: relative;
   padding-left: 6px;
@@ -51,7 +51,7 @@ body {
 .artist-label::after{
   content: '';
   position: absolute;
-  width: 340px;
+  width: 20.23vw;
   border-bottom: solid 1px #D92647;
   bottom: -20px;
   left: 0;
@@ -65,10 +65,10 @@ body {
   font-weight: 400;
   color: #D92647;
   position: absolute;
-  font-size: 222px;
+  font-size: 13.21vw;
   z-index: -1;
   text-transform: uppercase;
-  line-height: 180px;
+  line-height: 17.14vh;
   filter: multiply(100%);
 }
 
@@ -80,7 +80,7 @@ body {
 .shadow--bottom-right {
   top: 420px;
   left: 55%;
-  line-height: 210px;
+  line-height: 20vh;
 }
 .shadow p {
   margin: 20px;
@@ -99,11 +99,11 @@ body {
 }
 
 .artist-shadow {
-  font-size: 188px;
+  font-size: 11.39vw;
 }
 
 .title-shadow {
-  font-size: 188px;
+  font-size: 11.39vw;
 }
 
 .shadows {
@@ -115,6 +115,6 @@ body {
   opacity: .16;
   color: #e3e3e3;
   filter: multiply(100%);
-  font-size: 188px;
+  font-size: 11.39vw;
 }
 
