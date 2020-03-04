@@ -1,5 +1,5 @@
 body {
-  background: #E489C4;; 
+  background: #75BC59;; 
   overflow: hidden;
 }
 
@@ -17,10 +17,10 @@ body {
 
 .track {
   position: absolute;
-  color: #D92647;
-  top: 68%;
-  left: calc(50% - 33vw);
-  transform: translate(-50%, -50%);
+  color: #2A4AE0;
+  top: 71%;
+  left: 3vw;
+  transform: translateY(-50%);
   width: 22.54vw;
   line-height: 5.71vh;
   font-weight: 900;
@@ -28,10 +28,10 @@ body {
 
 .title {
   font-family: "Syncopate", sans-serif;
-  font-size: 5.48vw;
+  font-size: 3.48vw;
   font-weight: 700;
   text-transform: uppercase;
-  line-height: 7.62vh;
+  line-height: 4.62vh;
 }
 
 .artist-label {
@@ -52,7 +52,7 @@ body {
   content: '';
   position: absolute;
   width: 100%;
-  border-bottom: solid 1px #D92647;
+  border-bottom: solid 1px #2A4AE0;
   bottom: -20px;
   left: 6px;
 }
@@ -62,7 +62,7 @@ body {
   overflow: hidden;
   font-family: "Syncopate", sans-serif;
   font-weight: 400;
-  color: #D92647;
+  color: #2A4AE0;
   position: absolute;
   font-size: 13.21vw;
   z-index: -1;
@@ -87,7 +87,7 @@ body {
 
 .spotify-wrapper::before {
   position: absolute;
-  background-color: #DB2944;
+  background-color: #2A4AE0;
   z-index: -1;
   left: -25px;
   top: 12px;
