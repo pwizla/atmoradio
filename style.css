@@ -22,7 +22,7 @@ body {
   top: 68%;
   left: calc(50% - 33vw);
   transform: translate(-50%, -50%);
-  width: 20.54vw;
+  width: 22.54vw;
   line-height: 5.71vh;
   font-weight: 900;
 }
@@ -55,7 +55,7 @@ body {
   width: 20.23vw;
   border-bottom: solid 1px #D92647;
   bottom: -20px;
-  left: 0;
+  left: 6px;
 }
 
 .shadow {
