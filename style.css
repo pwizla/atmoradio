@@ -78,7 +78,7 @@ body {
 }
 
 .shadow--bottom-right {
-  top: 420px;
+  top: 40vh;
   left: 55%;
   line-height: 20vh;
 }
