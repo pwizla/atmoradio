@@ -18,28 +18,29 @@ body {
 .track {
   position: absolute;
   color: #D92647;
-  font-family: "Montserrat", sans-serif;
   top: 68%;
   left: calc(50% - 550px);
   transform: translate(-50%, -50%);
-  width: 301px;
+  width: 345px;
   line-height: 60px;
   font-weight: 900;
 }
 
 .title {
+  font-family: "Syncopate", sans-serif;
   font-size: 92px;
+  font-weight: 700;
   text-transform: uppercase;
   line-height: 80px;
-  letter-spacing: 4px;
 }
 
 .artist-label {
   font-family: "Old Standard TT", serif;
   font-weight: 400;
-  font-size: 29px;
+  font-size: 32px;
   margin-top: 20px;
   position: relative;
+  padding-left: 6px;
 }
 
 
@@ -50,20 +51,21 @@ body {
 .artist-label::after{
   content: '';
   position: absolute;
-  width: 100%;
+  width: 340px;
   border-bottom: solid 1px #D92647;
   bottom: -20px;
   left: 0;
 }
 
 .shadow {
-  opacity: .4;
+  /* opacity: .4; */
   width: 150%;
   overflow: hidden;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Syncopate", sans-serif;
+  font-weight: 400;
   color: #D92647;
   position: absolute;
-  font-size: 262px;
+  font-size: 222px;
   z-index: -1;
   text-transform: uppercase;
   line-height: 180px;
