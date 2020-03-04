@@ -52,14 +52,13 @@ body {
 .artist-label::after{
   content: '';
   position: absolute;
-  width: 20.23vw;
+  width: 100%;
   border-bottom: solid 1px #D92647;
   bottom: -20px;
   left: 6px;
 }
 
 .shadow {
-  /* opacity: .4; */
   width: 150%;
   overflow: hidden;
   font-family: "Syncopate", sans-serif;
