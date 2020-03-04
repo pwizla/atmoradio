@@ -31,14 +31,13 @@ body {
   font-size: 5.48vw;
   font-weight: 700;
   text-transform: uppercase;
-  line-height: 7.62vh;
+  line-height: 5.62vh;
 }
 
 .artist-label {
   font-family: "Old Standard TT", serif;
   font-weight: 400;
   font-size: 1.91vw;
-  margin-top: 20px;
   position: relative;
   padding-left: 6px;
 }
