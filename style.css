@@ -60,6 +60,10 @@ body {
   overflow: hidden;
 }
 
+.podcast-list__item:last-of-type {
+  margin-right: 0;
+}
+
 .podcast-list__item img {
   transition: box-shadow 0.3s ease;
 }
