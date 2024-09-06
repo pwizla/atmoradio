@@ -158,15 +158,18 @@ body {
     transform: translateY(-2.8em);
   }
 
-  .icon__social {
+  .instagram {
     width: 72px;
     height: 72px;
+    position: absolute;
+    left: 574px;
+    top: 72px;
   }
 
   .logo {
     position: relative;
     max-height: 400px;
     top: -40px;
-    left: -30px;
+    left: -40px;
   }
 }
