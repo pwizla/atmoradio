@@ -114,7 +114,7 @@ body {
   object-fit: cover;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 1024px) {
   .podcast-list__item {
     margin-right: 8px;
     margin-bottom: 8px;
