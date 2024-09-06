@@ -3,7 +3,21 @@ body {
   margin-right: 36px;
 }
 
-.main {
+.header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: no-wrap;
+  justify-content: space-between;
+}
+
+.social {
+  margin-top: 52px;
+  margin-right: 10px;
+}
+
+.icon__social {
+  width: 24px;
+  height: 24px;
 }
 
 .logo {
