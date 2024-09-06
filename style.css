@@ -107,8 +107,8 @@ body {
 .podcast-list__item img {
   width: 100%;
   height: auto;
-  min-width: 300px;
-  min-height: 300px;
+  min-width: 400px;
+  min-height: 400px;
   max-width: 600px;
   max-height: 600px;
   object-fit: cover;
@@ -136,5 +136,10 @@ body {
 
   .podcast-list__item:hover .spotify-cta {
     transform: translateY(-2.8em);
+  }
+
+  .icon__social {
+    width: 48px;
+    height: 48px;
   }
 }
