@@ -14,13 +14,6 @@
     <div class="main">
       <div class="podcast-list__wrapper">
         <ul class="podcast-list">
-          <!-- <li class="podcast-list__item item-03">
-            <a href="https://open.spotify.com/playlist/2SPHtaUelGXVChgpyWsyhn?si=1df1ca2bfce64b68">
-              <div class="overlay-number overlay-number-03">03</div>
-              <img src="Picks-and-Kicks-03-sep24.png" />
-              <div class="spotify-cta">Listen on Spotify<span class="spotify-cta-arrow">→</span></div>
-            </a>
-          </li> -->
           <li class="podcast-list__item item-02">
             <a href="https://open.spotify.com/playlist/6qyfUL4cCBZe4H7c75tgNJ?si=3d2abb5811a8403e">
               <div class="overlay-number overlay-number-02">02</div>
@@ -35,9 +28,179 @@
               <div class="spotify-cta">Listen on Spotify<span class="spotify-cta-arrow">→</span></div>
             </a>
           </li>
+          <audio id="lifeboat" preload="auto">
+            <source src="samples/lifeboat.mp3">
+          </audio>
+          <audio id="ourair" preload="auto">
+            <source src="samples/ourair.mp3">
+          </audio>
+          <audio id="openwater" preload="auto">
+            <source src="samples/openwater.mp3">
+          </audio>
+          <audio id="loveheart" preload="auto">
+            <source src="samples/loveheart.mp3">
+          </audio>
+          <audio id="sandown" preload="auto">
+            <source src="samples/sandown.mp3">
+          </audio>
+          <audio id="donnemoi" preload="auto">
+            <source src="samples/donnemoi.mp3">
+          </audio>
+          <audio id="bronx" preload="auto">
+            <source src="samples/bronx.mp3">
+          </audio>
+          <audio id="heygirl" preload="auto">
+            <source src="samples/heygirl.mp3">
+          </audio>
+          <audio id="ocotillo" preload="auto">
+            <source src="samples/ocotillo.mp3">
+          </audio>
+          <audio id="deepsea" preload="auto">
+            <source src="samples/deepsea.mp3">
+          </audio>
+          <audio id="sotired" preload="auto">
+            <source src="samples/sotired.mp3">
+          </audio>
+          <audio id="badidea" preload="auto">
+            <source src="samples/badidea.mp3">
+          </audio>
+          <audio id="pcoq" preload="auto">
+            <source src="samples/pcoq.mp3">
+          </audio>
+          <audio id="neoclone" preload="auto">
+            <source src="samples/neoclone.mp3">
+          </audio>
+          <audio id="zipper" preload="auto">
+            <source src="samples/zipper.mp3">
+          </audio>
+          <audio id="horse" preload="auto">
+            <source src="samples/horse.mp3">
+          </audio>
+          <audio id="blackwhite" preload="auto">
+            <source src="samples/blackwhite.mp3">
+          </audio>
+          <audio id="remat" preload="auto">
+            <source src="samples/remat.mp3">
+          </audio>
+          <audio id="zipper" preload="auto">
+            <source src="samples/zipper.mp3">
+          </audio>
         </ul>
       </div>
     </div>
    </body>
+
+  <script>
+   const audios01 = [
+      document.getElementById("lifeboat"),
+      document.getElementById("ourair"),
+      document.getElementById("openwater"),
+      document.getElementById("loveheart"),
+      document.getElementById("sandown"),
+      document.getElementById("donnemoi"),
+      document.getElementById("bronx"),
+      document.getElementById("hotwired"),
+      document.getElementById("summon"),
+    ];
+    const audios02 = [
+      document.getElementById("heygirl"),
+      document.getElementById("ocotillo"),
+      document.getElementById("deepsea"),
+      document.getElementById("badidea"),
+      document.getElementById("pcoq"),
+      document.getElementById("neoclone"),
+      document.getElementById("zipper"),
+      document.getElementById("horse"),
+      document.getElementById("blackwhite"),
+      document.getElementById("remat"),
+      document.getElementById("horse"),
+      document.getElementById("sotired"),
+    ];
+    
+    const item01 = document.querySelector(".item-01");
+    const item02 = document.querySelector(".item-02");
+    let currentAudio = null; // Pour garder une référence du fichier audio en lecture
+
+    // Fonction pour faire un fade in du volume
+    function fadeIn(audioElement, duration) {
+      let volume = 0;
+      audioElement.volume = volume;
+      const step = 0.1;  // Intervalle de 50 ms pour ajuster le volume
+
+      const fade = setInterval(() => {
+        if (volume < 1) {
+          volume = Math.min(volume + step / (duration / 50), 1);  // Augmente le volume progressivement
+          audioElement.volume = volume;
+        } else {
+          clearInterval(fade);
+        }
+      }, 50);
+    }
+
+    // Fonction pour faire un fade out du volume
+    function fadeOut(audioElement, duration) {
+      let volume = audioElement.volume;
+      const step = 0.1;
+
+      const fade = setInterval(() => {
+        if (volume > 0) {
+          volume = Math.max(volume - step / (duration / 50), 0);  // Réduit le volume progressivement
+          audioElement.volume = volume;
+        } else {
+          audioElement.pause();
+          audioElement.currentTime = 0;  // Réinitialise l'audio
+          clearInterval(fade);
+        }
+      }, 50);
+    }
+
+    item01.addEventListener("mouseenter", function() {
+      // Arrête l'audio précédent s'il y en a un en lecture
+      if (currentAudio) {
+        fadeOut(currentAudio, 100);
+      }
+
+      // Sélectionne un fichier audio aléatoire
+      const randomIndex = Math.floor(Math.random() * audios01.length);
+      currentAudio = audios01[randomIndex]; // Assigne l'audio sélectionné
+
+      // Démarre la lecture du nouvel audio avec un fade in
+      if (currentAudio.paused) {
+        currentAudio.play();
+      }
+      fadeIn(currentAudio, 100);  // 100ms fade in pour une vitesse plus rapide
+    });
+
+    item01.addEventListener("mouseleave", function() {
+      // Fait un fade out de l'audio en cours
+      if (currentAudio) {
+        fadeOut(currentAudio, 100);  // 100ms fade out pour une vitesse plus rapide
+      }
+    });
+
+    item02.addEventListener("mouseenter", function() {
+      // Arrête l'audio précédent s'il y en a un en lecture
+      if (currentAudio) {
+        fadeOut(currentAudio, 100);
+      }
+
+      // Sélectionne un fichier audio aléatoire
+      const randomIndex = Math.floor(Math.random() * audios02.length);
+      currentAudio = audios02[randomIndex]; // Assigne l'audio sélectionné
+
+      // Démarre la lecture du nouvel audio avec un fade in
+      if (currentAudio.paused) {
+        currentAudio.play();
+      }
+      fadeIn(currentAudio, 100);  // 100ms fade in pour une vitesse plus rapide
+    });
+
+    item02.addEventListener("mouseleave", function() {
+      // Fait un fade out de l'audio en cours
+      if (currentAudio) {
+        fadeOut(currentAudio, 100);  // 100ms fade out pour une vitesse plus rapide
+      }
+    });
+   </script>
 
 </html>
