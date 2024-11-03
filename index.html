@@ -14,20 +14,34 @@
     <div class="main">
       <div class="podcast-list__wrapper">
         <ul class="podcast-list">
+          <li class="podcast-list__item item-03">
+            <a href="https://open.spotify.com/playlist/4ip6XMEKRBw5T40acK7HGz?si=wayNFnM-QDWbWgBVA1Q1qA">
+              <div class="overlay-number overlay-number-03">03</div>
+              <img src="/images/Picks-and-Kicks-03-sep24.png" />
+              <div class="spotify-cta">Listen on Spotify<span class="spotify-cta-arrow">→</span></div>
+            </a>
+          </li>
           <li class="podcast-list__item item-02">
             <a href="https://open.spotify.com/playlist/6qyfUL4cCBZe4H7c75tgNJ?si=3d2abb5811a8403e">
               <div class="overlay-number overlay-number-02">02</div>
-              <img src="Picks-and-Kicks-02-aug24.png" />
+              <img src="/images/Picks-and-Kicks-02-aug24.png" />
               <div class="spotify-cta">Listen on Spotify<span class="spotify-cta-arrow">→</span></div>
             </a>
           </li>
           <li class="podcast-list__item item-01">
             <a href="https://open.spotify.com/playlist/2SPHtaUelGXVChgpyWsyhn?si=1df1ca2bfce64b68">
               <div class="overlay-number overlay-number-01">01</div>
-              <img src="Picks-and-Kicks-01-jul24.png" />
+              <img src="/images/Picks-and-Kicks-01-jul24.png" />
               <div class="spotify-cta">Listen on Spotify<span class="spotify-cta-arrow">→</span></div>
             </a>
           </li>
+          <!-- <li class="podcast-list__item item-live-01">
+            <a href="https://open.spotify.com/playlist/2SPHtaUelGXVChgpyWsyhn?si=1df1ca2bfce64b68">
+              <div class="overlay-number overlay-number-live-01">00</div>
+              <img src="/images/live210912.png" />
+              <div class="mixcloud-cta">Listen on Mixcloud<span class="spotify-cta-arrow">→</span></div>
+            </a>
+          </li> -->
           <audio id="lifeboat" preload="auto">
             <source src="samples/lifeboat.mp3">
           </audio>
@@ -85,6 +99,51 @@
           <audio id="zipper" preload="auto">
             <source src="samples/zipper.mp3">
           </audio>
+          <audio id="owow" preload="auto">
+            <source src="samples/owow.mp3">
+          </audio>
+          <audio id="continuum" preload="auto">
+            <source src="samples/continuum.mp3">
+          </audio>
+          <audio id="nubyadawn" preload="auto">
+            <source src="samples/nubyadawn.mp3">
+          </audio>
+          <audio id="groke" preload="auto">
+            <source src="samples/groke.mp3">
+          </audio>
+          <audio id="undefeated" preload="auto">
+            <source src="samples/undefeated.mp3">
+          </audio>
+          <audio id="bullfrog" preload="auto">
+            <source src="samples/bullfrog.mp3">
+          </audio>
+          <audio id="teemango" preload="auto">
+            <source src="samples/teemango.mp3">
+          </audio>
+          <audio id="wishuwell" preload="auto">
+            <source src="samples/wishuwell.mp3">
+          </audio>
+          <audio id="nilufer" preload="auto">
+            <source src="samples/nilufer.mp3">
+          </audio>
+          <audio id="nofeel" preload="auto">
+            <source src="samples/nofeel.mp3">
+          </audio>
+          <audio id="bonbon" preload="auto">
+            <source src="samples/bonbon.mp3">
+          </audio>
+          <audio id="nullspace" preload="auto">
+            <source src="samples/nullspace.mp3">
+          </audio>
+          <audio id="sempre" preload="auto">
+            <source src="samples/sempre.mp3">
+          </audio>
+          <audio id="sophieone" preload="auto">
+            <source src="samples/sophieone.mp3">
+          </audio>
+          <audio id="kural" preload="auto">
+            <source src="samples/kural.mp3">
+          </audio>
         </ul>
       </div>
     </div>
@@ -116,9 +175,27 @@
       document.getElementById("horse"),
       document.getElementById("sotired"),
     ];
+    const audios03 = [
+      document.getElementById("owow"),
+      document.getElementById("continuum"),
+      document.getElementById("nubyadawn"),
+      document.getElementById("groke"),
+      document.getElementById("undefeated"),
+      document.getElementById("bullfrog"),
+      document.getElementById("teemango"),
+      document.getElementById("wishuwell"),
+      document.getElementById("nilufer"),
+      document.getElementById("nofeel"),
+      document.getElementById("bonbon"),
+      document.getElementById("nullspace"),
+      document.getElementById("sempre"),
+      document.getElementById("sophieone"),
+      document.getElementById("kural"),
+    ];
     
     const item01 = document.querySelector(".item-01");
     const item02 = document.querySelector(".item-02");
+    const item03 = document.querySelector(".item-03");
     let currentAudio = null; // Pour garder une référence du fichier audio en lecture
 
     // Fonction pour faire un fade in du volume
@@ -196,6 +273,30 @@
     });
 
     item02.addEventListener("mouseleave", function() {
+      // Fait un fade out de l'audio en cours
+      if (currentAudio) {
+        fadeOut(currentAudio, 100);  // 100ms fade out pour une vitesse plus rapide
+      }
+    });
+
+    item03.addEventListener("mouseenter", function() {
+      // Arrête l'audio précédent s'il y en a un en lecture
+      if (currentAudio) {
+        fadeOut(currentAudio, 100);
+      }
+
+      // Sélectionne un fichier audio aléatoire
+      const randomIndex = Math.floor(Math.random() * audios03.length);
+      currentAudio = audios03[randomIndex]; // Assigne l'audio sélectionné
+
+      // Démarre la lecture du nouvel audio avec un fade in
+      if (currentAudio.paused) {
+        currentAudio.play();
+      }
+      fadeIn(currentAudio, 100);  // 100ms fade in pour une vitesse plus rapide
+    });
+
+    item03.addEventListener("mouseleave", function() {
       // Fait un fade out de l'audio en cours
       if (currentAudio) {
         fadeOut(currentAudio, 100);  // 100ms fade out pour une vitesse plus rapide
